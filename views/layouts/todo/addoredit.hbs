@@ -1,0 +1,36 @@
+<div class="alert-danger">
+    {{error}}
+</div>
+<h3>{{viewTitle}}</h3>
+
+    <form action="/todo" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{todo._id}}">
+        <div class="form-group">
+            <label>Todo ID</label>
+            <input type="text" class="form-control" name="todoid" placeholder="Describe your todo ID">
+        </div>
+        <div class="form-group">
+            <label>Todo Name</label>
+            <input type="text" class="form-control" name="todoname"  placeholder="Describe your todo namw">
+        </div>
+        <div class="form-row">
+            <div class="form-group md-6">
+                <label>Your Task</label>
+                <input type="text" name="todo" placeholder="Describe your todo task" class="form-control">
+                
+             </div>
+            <div class="form-group md-6">
+                <label>Task Description</label>
+                <input type="text" name="description" placeholder="Describe your todo description"  class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+            <a href="todo/list" class="btn btn-danger">
+                <i class="fa fa-list-alt"></i>View All
+            </a>
+        </div>
+
+
+    </form>

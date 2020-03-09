@@ -1,0 +1,42 @@
+<h3> 
+    <a href ="/todo">
+    <i class="fa fa-plus"></i>
+        Create New
+     </a> 
+     Task List  
+    </h3>
+
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th> Todo ID </th>
+                <th> Todo Name</th>
+                <th> Your task</th>
+                <th>Task Description</th>
+                <th></th>
+            </tr>
+        </thread>
+        <body>
+            {{#each list}}
+            <tr>
+                <td>{{this.todoid}}</td>
+                <td>{{this.todoname}}</td>
+                <td>{{this.priority}}</td>
+                <td>{{this.description}}</td>
+                <td>
+                    <a href="/todo/{{this.__id}}">
+                        <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a href="/todo/delete{{this.__id}}" onclick="return confirm('are you confirm to delete this record')">
+                        <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+
+
+
+            
+            {{/each}}
+
+        </body>
+    </table>
